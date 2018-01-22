@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treeview Plugin</title>
+    <link rel="icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <link href="src/plugin/treeview/treeview.css" rel="stylesheet" />
+    <link href="src/plugin/font-awesome/css/font-awesome-4.7.min.css" rel="stylesheet" />
+    <link href="src/plugin/docs/docs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css">
+    <link href="src/plugin/bootstrap/css/bootstrap-3.3.7.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="page-header">Treeview</h1>
+        <div class="bs-callout bs-callout-info" id="callout-stacked-modals">
+            <h4>程式改善中...</h4>
+            <p></p>
+        </div>
+<!-- Basic -->
+        <h3>Basic</h3>
+        <p>Import</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-html" data-lang="html">
+                    &lt;link href="src/css/treeview.css" rel="stylesheet" /&gt;
+                    &lt;link href="src/plugin/font-awesome/css/font-awesome-4.7.min.css" rel="stylesheet" /&gt;
+                    &lt;script type="text/javascript" src="src/js/treeview.js"&gt;&lt;/script&gt;
+                </code>
+            </pre>
+        </figure>
+        <p>HTML</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-html" data-lang="html">
+                    &lt;div id="treeview_section" class="treeview_section" &gt;
+                        &lt;ul id="treeview"&gt;&lt;/ul&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+        </figure>
+        <p>Data Format</p>
+        <div class="bs-callout bs-callout-warning">
+            <h4>Reguire</h4>
+            <p><strong>ID, IDRel, FolderName</strong>, <a href="#dataOptions">more data...</a></p>
+        </div>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    var list = [
+                        {ID:1,IDRel:'',FolderName:'A Folder'},
+                        {ID:2,IDRel:'',FolderName:'B Folder'},
+                        {ID:3,IDRel:1,FolderName:'Folder 1'},
+                        {ID:4,IDRel:1,FolderName:'Folder 2'},
+                        {ID:5,IDRel:2,FolderName:'Folder 3'},
+                        {ID:6,IDRel:2,FolderName:'Folder 4'},
+                    ];
+                </code>
+            </pre>
+        </figure>
+        <p>JS</p>
+        <div class="bs-callout bs-callout-warning">
+            <h4>Reguire</h4>
+            <p><strong>list, parent</strong>, <a href="#options">more option...</a></p>
+        </div>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    $("#treeview").treeview({
+                        list:list,
+                        parent:''
+                    })
+                </code>
+            </pre>
+        </figure>
+        <p>Example</p>
+        <div id="treeview_section_1" class="treeview_section">
+            <ul id="treeview"></ul>
+        </div>
+
+        <hr/>
+<!-- data options-->
+        <h3 id="dataOptions">Data Options</h3>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    {
+                        list:   ,
+                        parent: ,
+                        FolderName: ,
+                        DocCount:   ,
+                    }
+                </code>
+            </pre>
+        </figure>
+
+        <hr/>
+<!-- options -->
+        <h3 id="options">Options</h3>
+<!--  isCheckbox  -->
+        <h4>isCheckbox</h4>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    Default: false
+                </code>
+            </pre>
+        </figure>
+        <h5>是否顯示checkbox</h5>
+        <p>JS</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    $("#treeview_2").treeview({
+                        list:list,
+                        parent:'',
+                        isCheckbox:true
+                    })
+                </code>
+            </pre>
+        </figure>
+        <p>Example</p>
+        <div id="treeview_section_2" class="treeview_section">
+            <ul id="treeview_2"></ul>
+        </div>
+
+        <hr/>
+<!--  isDocCount  -->
+        <h4>isDocCount</h4>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    Default: false
+                </code>
+            </pre>
+        </figure>
+        <h5>是否顯示資料夾內文件數(不包含資料夾數)</h5>
+        <p>JS</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    $("#treeview_3").treeview({
+                        list:list_docs,
+                        parent:'',
+                        isDocCount:true
+                    })
+                </code>
+            </pre>
+        </figure>
+        <p>Example</p>
+        <div id="treeview_section_3" class="treeview_section">
+            <ul id="treeview_3"></ul>
+        </div>
+
+        <hr/>
+<!--  editMode  -->
+        <h4>editMode</h4>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    Default: false
+                </code>
+            </pre>
+        </figure>
+        <h5>新增模式</h5>
+        <p>Data</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    var list_new = [
+                        {FolderName:'新資料夾(1)',ID:"n1",IDRel:"n"}
+                    ]
+                </code>
+            </pre>
+        </figure>
+        <p>JS</p>
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    $("#treeview_4").treeview({
+                        list:list_new,
+                        parent:'n',
+                        editMode:true
+                    })
+                </code>
+            </pre>
+        </figure>
+        <p>Example</p>
+        <div id="treeview_section_4" class="treeview_section">
+            <ul id="treeview_4"></ul>
+        </div>
+
+        <hr/>
+<!-- function -->
+        <h3 id="function">Function</h3>
+<!-- Add -->
+        <h4>Add</h4>
+
+        <hr/>
+<!-- Remove-->
+        <h4>Remove</h4>
+
+        <hr/>
+<!-- Move -->
+        <h4>Move</h4>
+
+        <hr/>
+<!-- Rename -->
+        <h4>Rename</h4>
+
+        <hr/>
+
+        <br/><br/><br/><br/><br/><br/>
+
+        <p>
+            <a href="https://github.com/Jounhon/treeview">https://github.com/Jounhon/treeview</a>
+        </p>
+
+        <br/><br/><br/>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src/plugin/bootstrap/js/bootstrap-3.3.7.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="src/plugin/treeview/treeview.js"></script>
+    <script type="text/javascript">
+        
+        var list,list_docs,list_new;
+        
+        $(function () {
+            $(".hljs").css({"background-color":'transparent',padding:0})
+            list = [
+                {ID:1,IDRel:'',FolderName:'A Folder'},
+                {ID:2,IDRel:'',FolderName:'B Folder'},
+                {ID:3,IDRel:1,FolderName:'Folder 1'},
+                {ID:4,IDRel:1,FolderName:'Folder 2'},
+                {ID:5,IDRel:2,FolderName:'Folder 3'},
+                {ID:6,IDRel:2,FolderName:'Folder 4'},
+                ];
+
+            list_docs = [
+                {ID:1,IDRel:'',FolderName:'A Folder',DocCount:0},
+                {ID:2,IDRel:'',FolderName:'B Folder',DocCount:7},
+                {ID:3,IDRel:1,FolderName:'Folder 1',DocCount:33},
+                {ID:4,IDRel:1,FolderName:'Folder 2',DocCount:50},
+                {ID:5,IDRel:2,FolderName:'Folder 3',DocCount:4},
+                {ID:6,IDRel:2,FolderName:'Folder 4',DocCount:99},
+            ];
+
+            list_new = [
+                {FolderName:'新資料夾(1)',ID:"n1",IDRel:"n"}
+            ]
+
+            $("#treeview").treeview({
+                list:list,
+                parent:''
+            })
+
+            $("#treeview_2").treeview({
+                list:list,
+                parent:'',
+                isCheckbox:true
+            })
+
+            $("#treeview_3").treeview({
+                list:list_docs,
+                parent:'',
+                isDocCount:true
+            })
+
+            $("#treeview_4").treeview({
+                list:list_new,
+                parent:'n',
+                editMode:true
+            })
+        })
+        
+    </script>
+</body>
+</html>
