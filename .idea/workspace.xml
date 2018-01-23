@@ -19,8 +19,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="55" column="60" lean-forward="false" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+            <state relative-caret-position="1056">
+              <caret line="245" column="29" lean-forward="true" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
               <folding>
                 <element signature="e#1212#1216#0" expanded="true" />
                 <element signature="e#1267#1271#0" expanded="true" />
@@ -46,7 +46,7 @@
       <file leaf-file-name="treeview.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin/treeview/treeview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-797">
+            <state relative-caret-position="886">
               <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="69" />
               <folding>
                 <marker date="1516611814159" expanded="true" signature="6213:6226" ph="..." />
@@ -213,12 +213,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516605169732</updated>
-      <workItem from="1516605171277" duration="8609000" />
+      <workItem from="1516605171277" duration="8711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8609000" />
+    <option name="totallyTimeSpent" value="8711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
@@ -282,7 +282,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin/treeview/treeview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-797">
+        <state relative-caret-position="886">
           <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="69" />
           <folding>
             <marker date="1516611814159" expanded="true" signature="6213:6226" ph="..." />
@@ -294,8 +294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="55" column="60" lean-forward="false" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+        <state relative-caret-position="1056">
+          <caret line="245" column="29" lean-forward="true" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
           <folding>
             <element signature="e#1212#1216#0" expanded="true" />
             <element signature="e#1267#1271#0" expanded="true" />
