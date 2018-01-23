@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Treeview Plugin</title>
+    <title>Folder Treeview Plugin</title>
     <link rel="icon" href="./src/img/favicon.ico" type="image/x-icon">
     <link href="src/plugin/treeview/treeview.css" rel="stylesheet" />
     <link href="src/plugin/font-awesome/css/font-awesome-4.7.min.css" rel="stylesheet" />
@@ -15,9 +15,9 @@
 <body>
 
     <div class="container">
-        <h1 class="page-header">Treeview</h1>
+        <h1 class="page-header">Folder Treeview</h1>
         <div class="bs-callout bs-callout-info" id="callout-stacked-modals">
-            <h4>程式改善中...</h4>
+            <h4>持續修改中...</h4>
             <p></p>
         </div>
 <!-- Basic -->
@@ -88,10 +88,10 @@
             <pre>
                 <code class="language-js" data-lang="js">
                     {
-                        list:   ,
-                        parent: ,
-                        FolderName: ,
-                        DocCount:   ,
+                        ID:   ,       //folder ID
+                        IDRel: ,       //folder Parent
+                        FolderName: ,   //folder Name
+                        DocCount:   ,   //folder Document Count
                     }
                 </code>
             </pre>
@@ -198,19 +198,58 @@
         <h3 id="function">Function</h3>
 <!-- Add -->
         <h4>Add</h4>
-
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    var item = {
+                        ID: ,
+                        IDRel:  ,
+                        FolderName: ,
+                        DocCount:   ,
+                    }
+                    $("#treeview_5").treeview("add",item)
+                </code>
+            </pre>
+        </figure>
         <hr/>
 <!-- Remove-->
         <h4>Remove</h4>
-
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    $("#treeview_6").treeview("remove",ID)
+                </code>
+            </pre>
+        </figure>
         <hr/>
 <!-- Move -->
         <h4>Move</h4>
-
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    var data = {
+                        sourceFod:  ,
+                        destinationFod: ,
+                    }
+                    $("#treeview_7").treeview("move",data)
+                </code>
+            </pre>
+        </figure>
         <hr/>
 <!-- Rename -->
         <h4>Rename</h4>
-
+        <figure class="highlight">
+            <pre>
+                <code class="language-js" data-lang="js">
+                    var item = {
+                        ID: ,
+                        IDRel:  ,
+                        FolderName: ,
+                    }
+                    $("#treeview_8").treeview("rename",item)
+                </code>
+            </pre>
+        </figure>
         <hr/>
 
         <br/><br/><br/><br/><br/><br/>
